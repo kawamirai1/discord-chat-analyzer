@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
+  <div class="chat-recap">
     <h1>Chat Recap</h1>
     
     <!-- File upload -->
@@ -15,103 +15,18 @@
     
     <!-- Participant selection -->
     <div id="participantSelection" style="display: none;">
-      <label for="user1">Select User 1:</label>
-      <select id="user1"></select>
+      <label for="man">Enter Man's Name:</label>
+      <input type="text" id="man" placeholder="Man's Name">
       
-      <label for="user2">Select User 2:</label>
-      <select id="user2"></select>
+      <label for="woman">Enter Woman's Name:</label>
+      <input type="text" id="woman" placeholder="Woman's Name">
       
       <button id="generateStats">Generate Statistics</button>
     </div>
     
     <!-- Statistics display -->
     <div id="stats" style="display: none;">
-      <div class="chat-recap">
-        <div class="stat">
-          <span class="label">Start of Chat</span>
-          <span class="value" id="startOfChat"></span>
-        </div>
-        <div class="stat">
-          <span class="label">End of Chat</span>
-          <span class="value" id="endOfChat"></span>
-        </div>
-        <div class="stat">
-          <span class="label" id="duration"></span>
-        </div>
-        <div class="stat">
-          <span class="label" id="messagesUser1"></span>
-        </div>
-        <div class="stat">
-          <span class="label" id="messagesUser2"></span>
-        </div>
-        <div class="stat">
-          <span class="label" id="longestMessageUser1"></span>
-        </div>
-        <div class="stat">
-          <span class="label" id="longestMessageUser2"></span>
-        </div>
-        <div class="highlight" id="interestLevel"></div>
-        <p class="small-text" id="interestDetails"></p>
-        <div class="progress-bar">
-          <div class="fill" id="interestFill"></div>
-        </div>
-        <div class="stat">
-          <span class="label" id="responseTimeUser1"></span>
-        </div>
-        <div class="stat">
-          <span class="label" id="responseTimeUser2"></span>
-        </div>
-        <div class="stat">
-          <span class="label" id="complimentsUser2"></span>
-        </div>
-        <div class="stat">
-          <span class="label" id="timesBegged"></span>
-        </div>
-        <div class="emoji-list">
-          <h2>Most Used Emojis</h2>
-          <ul id="emojiList"></ul>
-        </div>
-        <div class="section-title">Additional Stats</div>
-        <div class="grid">
-          <div class="grid-item">
-            <h3 id="mostSaidPhraseUser1"></h3>
-            <p id="mostSaidPhraseUser1Count"></p>
-          </div>
-          <div class="grid-item">
-            <h3 id="mostSaidPhraseUser2"></h3>
-            <p id="mostSaidPhraseUser2Count"></p>
-          </div>
-          <div class="grid-item">
-            <h3 id="longestConversation"></h3>
-            <p id="longestConversationDetails"></p>
-          </div>
-          <div class="grid-item">
-            <h3 id="mostActiveDay"></h3>
-            <p id="mostActiveDayDetails"></p>
-          </div>
-          <div class="grid-item">
-            <h3 id="totalILoveYou"></h3>
-            <p id="totalILoveYouDetails"></p>
-          </div>
-          <div class="grid-item">
-            <h3 id="totalIMissYou"></h3>
-            <p id="totalIMissYouDetails"></p>
-          </div>
-          <div class="grid-item">
-            <h3 id="mostActiveHour"></h3>
-            <p id="mostActiveHourDetails"></p>
-          </div>
-          <div class="grid-item">
-            <h3 id="mostTalkedAboutTopic"></h3>
-            <p id="mostTalkedAboutTopicDetails"></p>
-          </div>
-          <div class="grid-item">
-            <h3 id="totalEmojisUsed"></h3>
-            <p id="totalEmojisUsedDetails"></p>
-          </div>
-        </div>
-        <p class="footer">Made with ❤️ by Kawa</p>
-      </div>
+      <!-- Statistics will be dynamically inserted here -->
     </div>
   </div>
   <script src="script.js"></script>
