@@ -3,45 +3,117 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Discord Chat Analyzer</title>
-  <link rel="stylesheet" href="styles.css">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({
-      google_ad_client: "ca-pub-XXXXXXXXXXXXXXX", // Replace with your AdSense client ID
-      enable_page_level_ads: true
-    });
-  </script>
+  <title>Chat Recap</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1>Discord Chat Analyzer</h1>
-    <form id="uploadForm">
-      <label for="chatFile">Upload Your Discord Chat (.txt):</label>
-      <input type="file" id="chatFile" accept=".txt" required>
-      <br><br>
-      <label for="girlName">Girl's Name:</label>
-      <input type="text" id="girlName" placeholder="Enter the girl's name" required>
-      <br><br>
-      <label for="manName">Man's Name:</label>
-      <input type="text" id="manName" placeholder="Enter the man's name" required>
-      <br><br>
-      <button type="submit">Analyze</button>
-    </form>
-    <div id="output"></div>
+    <h1>Chat Recap</h1>
+    
+    <!-- File upload -->
+    <input type="file" id="fileInput" accept=".txt">
+    
+    <!-- Participant selection -->
+    <div id="participantSelection" style="display: none;">
+      <label for="user1">Select User 1:</label>
+      <select id="user1"></select>
+      
+      <label for="user2">Select User 2:</label>
+      <select id="user2"></select>
+      
+      <button id="generateStats">Generate Statistics</button>
+    </div>
+    
+    <!-- Statistics display -->
+    <div id="stats" style="display: none;">
+      <div class="chat-recap">
+        <div class="stat">
+          <span class="label">Start of Chat</span>
+          <span class="value" id="startOfChat"></span>
+        </div>
+        <div class="stat">
+          <span class="label">End of Chat</span>
+          <span class="value" id="endOfChat"></span>
+        </div>
+        <div class="stat">
+          <span class="label" id="duration"></span>
+        </div>
+        <div class="stat">
+          <span class="label" id="messagesUser1"></span>
+        </div>
+        <div class="stat">
+          <span class="label" id="messagesUser2"></span>
+        </div>
+        <div class="stat">
+          <span class="label" id="longestMessageUser1"></span>
+        </div>
+        <div class="stat">
+          <span class="label" id="longestMessageUser2"></span>
+        </div>
+        <div class="highlight" id="interestLevel"></div>
+        <p class="small-text" id="interestDetails"></p>
+        <div class="progress-bar">
+          <div class="fill" id="interestFill"></div>
+        </div>
+        <div class="stat">
+          <span class="label" id="responseTimeUser1"></span>
+        </div>
+        <div class="stat">
+          <span class="label" id="responseTimeUser2"></span>
+        </div>
+        <div class="stat">
+          <span class="label" id="complimentsUser2"></span>
+        </div>
+        <div class="stat">
+          <span class="label" id="timesBegged"></span>
+        </div>
+        <div class="emoji-list">
+          <h2>Most Used Emojis</h2>
+          <ul id="emojiList"></ul>
+        </div>
+        <div class="section-title">Additional Stats</div>
+        <div class="grid">
+          <div class="grid-item">
+            <h3 id="mostSaidPhraseUser1"></h3>
+            <p id="mostSaidPhraseUser1Count"></p>
+          </div>
+          <div class="grid-item">
+            <h3 id="mostSaidPhraseUser2"></h3>
+            <p id="mostSaidPhraseUser2Count"></p>
+          </div>
+          <div class="grid-item">
+            <h3 id="longestConversation"></h3>
+            <p id="longestConversationDetails"></p>
+          </div>
+          <div class="grid-item">
+            <h3 id="mostActiveDay"></h3>
+            <p id="mostActiveDayDetails"></p>
+          </div>
+          <div class="grid-item">
+            <h3 id="totalILoveYou"></h3>
+            <p id="totalILoveYouDetails"></p>
+          </div>
+          <div class="grid-item">
+            <h3 id="totalIMissYou"></h3>
+            <p id="totalIMissYouDetails"></p>
+          </div>
+          <div class="grid-item">
+            <h3 id="mostActiveHour"></h3>
+            <p id="mostActiveHourDetails"></p>
+          </div>
+          <div class="grid-item">
+            <h3 id="mostTalkedAboutTopic"></h3>
+            <p id="mostTalkedAboutTopicDetails"></p>
+          </div>
+          <div class="grid-item">
+            <h3 id="totalEmojisUsed"></h3>
+            <p id="totalEmojisUsedDetails"></p>
+          </div>
+        </div>
+        <p class="footer">Made with ❤️ by Kawa</p>
+      </div>
+    </div>
   </div>
-
-  <div style="text-align: center;">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-XXXXXXXXXXXXXXX" <!-- Replace with your AdSense client ID -->
-         data-ad-slot="XXXXXXX" <!-- Replace with your ad slot ID -->
-         data-ad-format="auto"></ins>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-  </div>
-
   <script src="script.js"></script>
 </body>
 </html>
