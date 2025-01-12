@@ -1,0 +1,43 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+label {
+  font-size: 1.2em;
+}
+
+input[type="text"], input[type="file"] {
+  padding: 8px;
+  margin: 10px 0;
+  width: 100%;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #ff66a3;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #ff3385;
+}
+
+#output {
+  margin-top: 20px;
+}
+
+.adsbygoogle {
+  margin-top: 30px;
+}
